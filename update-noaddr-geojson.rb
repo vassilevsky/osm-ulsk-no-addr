@@ -66,16 +66,16 @@ class BuildingsDownloader
     # TODO If a feature has a commonly used identifier, that identifier should be included as a member of the feature object with the name "id".
     sorted_buildings.map do |id, building|
       {
-          type:       'Feature',
-          geometry:   {
-              type:        'Polygon',
-              coordinates: [
-                               building
-                           ]
-          },
-          properties: {
-              id: id
-          }
+        type: 'Feature',
+        geometry:   {
+          type:        'Polygon',
+          coordinates: [
+            building
+          ]
+        },
+        properties: {
+          id: id
+        }
       }
     end
   end
