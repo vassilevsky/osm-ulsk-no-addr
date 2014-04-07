@@ -31,7 +31,7 @@ class BuildingsDownloader
 
       case element['type']
         when 'node'
-          corners[element['id']] = [element['lat'], element['lon']]
+          corners[element['id']] = [element['lon'], element['lat']]
         when 'way'
           buildings[element['id']] = element['nodes'].map { |id| corners[id] }
       end
