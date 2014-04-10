@@ -2,7 +2,8 @@ require 'httparty'
 
 class BuildingsDownloader
   def download
-    File.write('ulsk_buildings_no_addr.geojson', sorted_buildings_geojson)
+    buildings = sorted_buildings(buildings(overpass_data))
+    File.write('ulsk_buildings_no_addr.geojson', to_geojson(buildings))
   end
 
   private
@@ -22,7 +23,7 @@ class BuildingsDownloader
     OverpassQL
   end
 
-  def buildings
+  def buildings(overpass_data)
     corners   = {}
     buildings = {}
 
@@ -40,7 +41,7 @@ class BuildingsDownloader
     buildings
   end
 
-  def sorted_buildings
+  def sorted_buildings(buildings)
     i "Sorting #{buildings.size} buildings by area..."
     buildings.sort_by { |_, building| building_area(building) }.reverse
   end
@@ -60,11 +61,11 @@ class BuildingsDownloader
     x * y
   end
 
-  def features
+  def to_features(buildings)
     i 'Converting buildings to GeoJSON...'
 
     # TODO If a feature has a commonly used identifier, that identifier should be included as a member of the feature object with the name "id".
-    sorted_buildings.map do |id, building|
+    buildings.map do |id, building|
       {
         type: 'Feature',
         geometry:   {
@@ -80,8 +81,8 @@ class BuildingsDownloader
     end
   end
 
-  def sorted_buildings_geojson
-    {type: 'FeatureCollection', features: features}.to_json(indent: '   ', space: ' ', object_nl: "\n", array_nl: "\n")
+  def to_geojson(buildings)
+    {type: 'FeatureCollection', features: to_features(buildings)}.to_json(indent: '   ', space: ' ', object_nl: "\n", array_nl: "\n")
   end
 
   def i(message)
