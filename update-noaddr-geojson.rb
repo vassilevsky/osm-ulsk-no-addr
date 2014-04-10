@@ -3,7 +3,9 @@ require 'httparty'
 class BuildingsDownloader
   def download
     buildings = sorted_buildings(buildings(overpass_data))
+
     File.write('ulsk_buildings_no_addr.geojson', to_geojson(buildings))
+    File.write('ulsk_buildings_no_addr.md', to_markdown(buildings))
   end
 
   private
@@ -83,6 +85,10 @@ class BuildingsDownloader
 
   def to_geojson(buildings)
     {type: 'FeatureCollection', features: to_features(buildings)}.to_json(indent: '   ', space: ' ', object_nl: "\n", array_nl: "\n")
+  end
+
+  def to_markdown(buildings)
+    buildings.map{|id, _| "[#{id}](http://www.openstreetmap.org/way/#{id})" }.join("\n")
   end
 
   def i(message)
