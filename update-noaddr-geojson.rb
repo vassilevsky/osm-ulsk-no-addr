@@ -45,10 +45,10 @@ class BuildingsDownloader
 
   def sorted_buildings(buildings)
     i "Sorting #{buildings.size} buildings by area..."
-    buildings.sort_by { |_, building| building_area(building) }.reverse
+    buildings.sort_by { |_, building| area(building) }.reverse
   end
 
-  def building_area(corners)
+  def area(corners)
     lats = []
     lons = []
 
