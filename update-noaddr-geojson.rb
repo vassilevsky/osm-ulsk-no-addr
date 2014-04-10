@@ -36,7 +36,7 @@ class BuildingsDownloader
         when 'node'
           corners[element['id']] = [element['lon'], element['lat']]
         when 'way'
-          buildings[element['id']] = element['nodes'].map { |id| corners[id] }
+          buildings[element['id']] = element['nodes'].map{|id| corners[id] }
       end
     end
 
@@ -45,7 +45,7 @@ class BuildingsDownloader
 
   def sorted_buildings(buildings)
     i "Sorting #{buildings.size} buildings by area..."
-    buildings.sort_by { |_, building| area(building) }.reverse
+    buildings.sort_by{|_, building| area(building) }.reverse
   end
 
   def area(corners)
@@ -68,8 +68,8 @@ class BuildingsDownloader
     buildings.map do |id, building|
       {
         type: 'Feature',
-        geometry:   {
-          type:        'Polygon',
+        geometry: {
+          type: 'Polygon',
           coordinates: [
             building
           ]
