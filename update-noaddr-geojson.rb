@@ -26,12 +26,12 @@ class BuildingsDownloader
   end
 
   def buildings(overpass_data)
+    i 'Processing Overpass API data...'
+
     corners   = {}
     buildings = {}
 
     overpass_data['elements'].each do |element|
-      i "Processing element #{element['id']}..."
-
       case element['type']
         when 'node'
           corners[element['id']] = [element['lon'], element['lat']]
@@ -64,8 +64,6 @@ class BuildingsDownloader
   end
 
   def to_features(buildings)
-    i 'Converting buildings to GeoJSON...'
-
     # TODO If a feature has a commonly used identifier, that identifier should be included as a member of the feature object with the name "id".
     buildings.map do |id, building|
       {
@@ -84,10 +82,14 @@ class BuildingsDownloader
   end
 
   def to_geojson(buildings)
+    i 'Converting buildings to GeoJSON...'
+
     {type: 'FeatureCollection', features: to_features(buildings)}.to_json(indent: '   ', space: ' ', object_nl: "\n", array_nl: "\n")
   end
 
   def to_markdown(buildings)
+    i 'Converting buildings to Markdown...'
+
     buildings.map{|id, _| "[#{id}](http://www.openstreetmap.org/way/#{id})" }.join("\n")
   end
 
