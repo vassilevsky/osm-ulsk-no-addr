@@ -1335,7 +1335,6 @@
 [312196214](http://www.openstreetmap.org/way/312196214)
 [104425149](http://www.openstreetmap.org/way/104425149)
 [276719342](http://www.openstreetmap.org/way/276719342)
-[169642111](http://www.openstreetmap.org/way/169642111)
 [276066318](http://www.openstreetmap.org/way/276066318)
 [339308154](http://www.openstreetmap.org/way/339308154)
 [318616827](http://www.openstreetmap.org/way/318616827)
