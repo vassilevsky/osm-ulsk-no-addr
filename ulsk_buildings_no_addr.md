@@ -943,7 +943,6 @@
 [300785090](http://www.openstreetmap.org/way/300785090)
 [276255154](http://www.openstreetmap.org/way/276255154)
 [156253574](http://www.openstreetmap.org/way/156253574)
-[273936111](http://www.openstreetmap.org/way/273936111)
 [337531697](http://www.openstreetmap.org/way/337531697)
 [278213491](http://www.openstreetmap.org/way/278213491)
 [353592549](http://www.openstreetmap.org/way/353592549)
