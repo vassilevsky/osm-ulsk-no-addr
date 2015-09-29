@@ -932,6 +932,7 @@
 [318619339](http://www.openstreetmap.org/way/318619339)
 [343853237](http://www.openstreetmap.org/way/343853237)
 [325859842](http://www.openstreetmap.org/way/325859842)
+[372706100](http://www.openstreetmap.org/way/372706100)
 [276236473](http://www.openstreetmap.org/way/276236473)
 [367826504](http://www.openstreetmap.org/way/367826504)
 [344885014](http://www.openstreetmap.org/way/344885014)
