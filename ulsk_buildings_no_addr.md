@@ -261,7 +261,6 @@
 [276236460](http://www.openstreetmap.org/way/276236460)
 [276066272](http://www.openstreetmap.org/way/276066272)
 [362594582](http://www.openstreetmap.org/way/362594582)
-[226436833](http://www.openstreetmap.org/way/226436833)
 [282026854](http://www.openstreetmap.org/way/282026854)
 [276087715](http://www.openstreetmap.org/way/276087715)
 [273936113](http://www.openstreetmap.org/way/273936113)
