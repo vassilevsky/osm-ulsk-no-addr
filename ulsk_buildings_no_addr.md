@@ -55,7 +55,6 @@
 [275391983](http://www.openstreetmap.org/way/275391983)
 [276066283](http://www.openstreetmap.org/way/276066283)
 [117974091](http://www.openstreetmap.org/way/117974091)
-[276066341](http://www.openstreetmap.org/way/276066341)
 [276236464](http://www.openstreetmap.org/way/276236464)
 [273936095](http://www.openstreetmap.org/way/273936095)
 [275391978](http://www.openstreetmap.org/way/275391978)
