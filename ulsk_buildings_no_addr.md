@@ -3506,6 +3506,7 @@
 [317896471](http://www.openstreetmap.org/way/317896471)
 [284844882](http://www.openstreetmap.org/way/284844882)
 [330791563](http://www.openstreetmap.org/way/330791563)
+[377290983](http://www.openstreetmap.org/way/377290983)
 [312196167](http://www.openstreetmap.org/way/312196167)
 [329276154](http://www.openstreetmap.org/way/329276154)
 [361951283](http://www.openstreetmap.org/way/361951283)
