@@ -12,7 +12,7 @@ class BuildingsDownloader
 
   def overpass_query(query)
     i 'Querying Overpass API...'
-    HTTParty.post('http://overpass-api.de/api/interpreter', body: query)
+    HTTParty.post('http://overpass.openstreetmap.fr/api/interpreter', body: query)
   end
 
   def overpass_data
